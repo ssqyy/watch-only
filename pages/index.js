@@ -6,7 +6,7 @@ const HomePage = () => {
 
   useEffect(() => {
     // 在页面加载时进行 302 跳转
-    router.push('https://www.google.com', undefined, { shallow: true });
+    router.push('https://model.tgsou.com/', undefined, { shallow: true });
   }, []);
 
   return null;
