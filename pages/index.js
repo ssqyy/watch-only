@@ -1,23 +1,15 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const HomePage = () => {
+  const router = useRouter();
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+  useEffect(() => {
+    // 在页面加载时进行 302 跳转
+    router.push('https://www.google.com', undefined, { shallow: true });
+  }, []);
 
-      <Footer />
-    </div>
-  )
-}
+  return null;
+};
+
+export default HomePage;
